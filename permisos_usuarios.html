@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Permisos Roles</title>
+    <title>Permisos Usuarios</title>
 </head>
-<body onload="Ver_permisos_roles();">
+<body onload="Ver_permisos_usuarios();">
     <center>
-        <div id="Ver_permisos_roles"></div>
-        <h1>ADMINISTRAR PERMISOS - ROLES</h1>
-        <input type="number" id="rol" placeholder="ID rol">
+        <div id="Ver_permisos_usuarios"></div>
+        <h1>ADMINISTRAR PERMISOS - USUARIOS</h1>
+        <input type="text" id="usuario" placeholder="ID usuario">
         <select name="" id="permiso">
             <option value=""></option>
             <option value="1">Crear</option>
@@ -18,8 +18,8 @@
             <option value="3">Editar</option>
             <option value="4">Eliminar</option>
         </select>
-        <button onclick="otorgar_permiso_roles()">Otorgar</button>
-        <button onclick="denegar_permiso_roles()">Denegar</button>
+        <button onclick="otorgar_permiso_usuarios()">Otorgar</button>
+        <button onclick="denegar_permiso_usuarios()">Denegar</button>
     </center>
 </body>
 <script src="./personalizados/criss.js"></script>

@@ -1,3 +1,5 @@
+// ADMINISTRAR PERMISOS A ROLES ----------------INICIO-------------------------------
+
 function Ver_permisos_roles() {
     $.ajax({
         type: "POST",
@@ -48,3 +50,62 @@ function denegar_permiso_roles() {
         }
       })
 }
+
+// ADMINISTRAR PERMISOS A ROLES ----------------FIN-------------------------------
+
+// ADMINISTRAR PERMISOS A USUARIOS ----------------INICIO-------------------------------
+
+
+function Ver_permisos_usuarios() {
+    $.ajax({
+        type: "POST",
+        url: "controlador/Ver_permisos_usuarios.php",
+        success:function(d) {
+            
+            $("#Ver_permisos_usuarios").html(d);
+        }
+      })
+}
+
+function otorgar_permiso_usuarios() {
+
+    var datos = {
+        "usuario":$("#usuario").val(),
+        "permiso":$("#permiso").val(),
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "controlador/otorgar_permiso_usuarios.php",
+        data:datos,
+        success:function(d) {
+            alert("Otorgado");
+          document.getElementById("usuario").value = "";
+          document.getElementById("permiso").selectedIndex = 0;
+          Ver_permisos_usuarios();
+        }
+      })
+}
+
+function denegar_permiso_usuarios() {
+
+    var datos = {
+        "usuario":$("#usuario").val(),
+        "permiso":$("#permiso").val(),
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "controlador/denegar_permiso_usuarios.php",
+        data:datos,
+        success:function(d) {
+            alert("Denegado");
+          document.getElementById("usuario").value = "";
+          document.getElementById("permiso").selectedIndex = 0;
+          Ver_permisos_usuarios();
+        }
+      })
+}
+
+
+// ADMINISTRAR PERMISOS A USUARIOS ----------------FIN-------------------------------
