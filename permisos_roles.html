@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Permisos Roles</title>
 </head>
-<body>
+<body onload="Ver_permisos_roles();">
     <center>
-        <a href="">Ver permisos</a>
+        <div id="Ver_permisos_roles"></div>
         <h1>ADMINISTRAR PERMISOS</h1>
         <input type="number" placeholder="ID rol">
         <select name="" id="">
             <option value=""></option>
             <option value="1">Crear</option>
             <option value="2">Ver</option>
-            <option value="1">Editar</option>
-            <option value="1">Eliminar</option>
+            <option value="3">Editar</option>
+            <option value="4">Eliminar</option>
         </select>
+        <button>Otorgar</button>
+        <button>Denegar</button>
     </center>
 </body>
+<script src="./personalizados/criss.js"></script>
 </html>
