@@ -19,12 +19,12 @@
             <input type="password" id="contraseña" name="contraseña" placeholder="Escriba una clave" required><br><br>
 
             <label for="permiso">Permiso:</label>
-            <select name="permiso" id="permiso" required>
+            <select name="roles_usuario" id="roles_usuario" required>
                 <option value=""></option>
-                <option value="1">Crear</option>
-                <option value="2">Ver</option>
-                <option value="3">Editar</option>
-                <option value="4">Eliminar</option>
+                <option value="1">escritor</option>
+                <option value="2">lector</option>
+                <option value="3">Editor</option>
+                <option value="4">Administrador</option>
             </select><br><br>
 
             <button type="submit">Actualizar Usuario</button>

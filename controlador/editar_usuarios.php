@@ -6,7 +6,7 @@ if (isset($_POST['cedula'], $_POST['nombre'], $_POST['contraseña'], $_POST['per
     $cc = $_POST['cedula'];
     $Nombre = $_POST['nombre'];
     $contraseña = $_POST['contraseña'];
-    $Roles_idRoles = $_POST['permiso'];
+    $Roles_idRoles = $_POST['roles_usuario'];
     $encript_contraseña = md5($contraseña);
 
     // Consulta para obtener los datos del usuario que se va a editar

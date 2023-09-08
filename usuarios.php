@@ -13,12 +13,12 @@
             <input type="text" id="cedula" name="cedula" placeholder="Ingresar # de cc" required>
             <input type="text" id="nombre" name="nombre" placeholder="Ingresar nombre" required>
             <input type="password" id="contraseña" name="contraseña" placeholder="Escribir una clave" required>
-            <select name="permiso" id="permiso" required>
+            <select name="roles_usuario" id="roles_usuario" required>
                 <option value=""></option>
-                <option value="1">Crear</option>
-                <option value="2">Ver</option>
-                <option value="3">Editar</option>
-                <option value="4">Eliminar</option>
+                <option value="1">escritor</option>
+                <option value="2">lector</option>
+                <option value="3">Editor</option>
+                <option value="4">Administrador</option>
             </select>
             <button type="submit">Crear Usuario</button>
         </form>
