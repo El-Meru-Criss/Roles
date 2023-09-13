@@ -109,3 +109,16 @@ function denegar_permiso_usuarios() {
 
 
 // ADMINISTRAR PERMISOS A USUARIOS ----------------FIN-------------------------------
+
+// General
+
+function select_permisos() {
+  $.ajax({
+    type: "POST",
+    url: "controlador/select_permisos.php",
+    success:function(d) {
+        
+        $("#select_permisos").html(d);
+    }
+  })
+}

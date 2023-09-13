@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>roles</title>
+</head>
+<body onload="Ver_roles();" onload="mostar_permisos();">
+    <center>
+        <h1>ADMINISTRAR Roles</h1>
+        <input type="number" id="id_rol" placeholder="ID rol"><br>
+        <input type="text" id="nom_rol" placeholder="Nombre del rol"><br>
+        <button onclick="crear_rol()">Crear</button>
+        <button onclick="editar_rol()">Editar</button>
+        <div id="Ver_roles"></div>
+        <br><br>
+        <h1>ADMINISTRAR Permisos</h1>
+        <input type="number" id="id_permiso" placeholder="ID permiso"><br>
+        <input type="text" id="nom_per" placeholder="Nombre del permiso"><br>
+        <button onclick="crear_permiso()">Crear</button>
+        <button onclick="editar_permiso()">Editar</button>
+        <div id="mostar_permisos"></div>
+    </center>
+</body>
+<script src="./personalizados/steven.js"></script>
+</html>

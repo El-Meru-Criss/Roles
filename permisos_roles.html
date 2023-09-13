@@ -6,18 +6,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Permisos Roles</title>
 </head>
-<body onload="Ver_permisos_roles();">
+<body onload="Ver_permisos_roles(); select_permisos();">
     <center>
         <div id="Ver_permisos_roles"></div>
         <h1>ADMINISTRAR PERMISOS - ROLES</h1>
         <input type="number" id="rol" placeholder="ID rol">
-        <select name="" id="permiso">
-            <option value=""></option>
-            <option value="1">Crear</option>
-            <option value="2">Ver</option>
-            <option value="3">Editar</option>
-            <option value="4">Eliminar</option>
-        </select>
+        <div id="select_permisos">
+            <select name="" id="permiso">
+                <option value=""></option>
+                <option value="1">Crear</option>
+                <option value="2">Ver</option>
+                <option value="3">Editar</option>
+                <option value="4">Eliminar</option>
+            </select>
+        </div>
         <button onclick="otorgar_permiso_roles()">Otorgar</button>
         <button onclick="denegar_permiso_roles()">Denegar</button>
     </center>

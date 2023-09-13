@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Permisos Usuarios</title>
+</head>
+<body onload="Ver_libros();">
+    <div>
+        <a href="usuarios.php">usarios</a>
+        <a href="permisos_roles.html">administrar permisos de roles</a>
+        <a href="permisos_usuarios.html">administrar permisos de usuarios</a>
+        <a href="roles.html">roles</a>
+    </div>
+    <center>
+        <h1>ADMINISTRAR libros</h1>
+        <input type="number" id="id_libro" placeholder="ID libro"><br>
+        <input type="text" id="nom_libro" placeholder="titulo del libro"><br>
+        <button onclick="crear_libro()">Crear</button>
+        <button onclick="editar_libro()">Editar</button>
+        <div id="Ver_libros"></div>
+    </center>
+</body>
+<script src="./personalizados/mosquera.js"></script>
+</html>
