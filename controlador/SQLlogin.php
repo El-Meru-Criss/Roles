@@ -23,6 +23,10 @@ if (isset($_POST["usuarioLogin"]) && isset($_POST["claveLogin"])) {
     if ($stmt->rowCount() > 0) {
         $fila = $stmt->fetch(PDO::FETCH_ASSOC);
         $Roles_idRoles = $fila['Roles_idRoles'];
+        $cc = $fila['cc'];
+
+        $_SESSION['cc'] = $cc; // Guardar el CC del usuario en la variable de sesión
+        $_SESSION['Roles_idRoles'] = $Roles_idRoles; // Guardar el Rol del usuario en la variable de sesión
     
         // Redirige según el rol del usuario
         if ($Roles_idRoles == 10) {
