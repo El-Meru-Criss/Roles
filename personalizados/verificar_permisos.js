@@ -24,3 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     xhr.send();
 });
+
+function Restriccion_ver_libros() {
+    $.ajax({
+        type: "POST",
+        url: "controlador/Restriccion_ver_libros.php",
+        success:function(d) {
+            
+            alert(d);
+        }
+      })
+}
