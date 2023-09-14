@@ -6,9 +6,16 @@ require_once "../modelo/conexion.php";
 $usuario = $_POST['usuario'];
 $permiso = $_POST['permiso'];
 
-$sql = "DELETE FROM `Permisos_has_Usuarios` 
-WHERE `Usuarios_cc`= ".$usuario."
-AND `Permisos_idPermisos` = ".$permiso."";
+$sql = "UPDATE `permisos_has_usuarios` 
+SET `estado_usuario`= 0
+WHERE `Permisos_idPermisos` = ".$permiso."
+AND `Usuarios_cc` = ".$usuario."";
+
+$conexion -> query ($sql);
+
+$sql = "INSERT INTO `Permisos_has_Usuarios`
+(`Permisos_idPermisos`, `Usuarios_cc`, `estado_usuario`) 
+VALUES (".$permiso.",".$usuario.",0)";
 
 $conexion -> query ($sql);
 

@@ -23,7 +23,7 @@ while ($usuario = $usuarios->fetch(PDO::FETCH_ASSOC)) {
     
     echo $usuario['cc']." - ".$usuario['Nombre']." - ".$usuario['Nom_Rol']." - ";
 
-    $sql = "SELECT Permisos.Nom_Permiso 
+    $sql = "SELECT Permisos.Nom_Permiso, estado_usuario
     FROM `Permisos_has_Usuarios`
     INNER JOIN Permisos 
     ON Permisos.idPermisos = Permisos_has_Usuarios.Permisos_idPermisos
@@ -32,7 +32,12 @@ while ($usuario = $usuarios->fetch(PDO::FETCH_ASSOC)) {
     $permisos = $conexion -> query ($sql);
 
     while ($permiso = $permisos->fetch(PDO::FETCH_ASSOC)) {
-        echo $permiso['Nom_Permiso'].", ";
+        if ($permiso['estado_usuario'] == 0) {
+            echo "<b style='color: red;'>".$permiso['Nom_Permiso']."</b>, ";
+        } else {
+            echo "<b style='color: blue;'>".$permiso['Nom_Permiso']."</b>, ";
+        }
+        
     }
 
     echo "<br>";
