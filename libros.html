@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Permisos Usuarios</title>
 </head>
-<body onload="Ver_libros();">
+<body onload="Ver_libros(); Botones_libros();">
     <div>
         <a href="usuarios.php">usarios</a>
         <a href="permisos_roles.html">administrar permisos de roles</a>
@@ -17,8 +17,11 @@
         <h1>ADMINISTRAR libros</h1>
         <input type="number" id="id_libro" placeholder="ID libro"><br>
         <input type="text" id="nom_libro" placeholder="titulo del libro"><br>
-        <button onclick="crear_libro()">Crear</button>
-        <button onclick="editar_libro()">Editar</button>
+        <div id="Botones_libros">
+            <button onclick="crear_libro()">Crear</button>
+            <button onclick="editar_libro()">Editar</button>
+        </div>
+        
         <div id="Ver_libros"></div>
     </center>
 </body>

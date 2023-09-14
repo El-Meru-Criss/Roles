@@ -35,3 +35,13 @@ function Restriccion_ver_libros() {
         }
       })
 }
+
+function Botones_libros() {
+    $.ajax({
+        type: "POST",
+        url: "controlador/Botones_libros.php",
+        success:function(d) {
+            $("#Botones_libros").html(d);
+        }
+      })
+}
